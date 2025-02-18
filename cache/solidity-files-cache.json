@@ -1,0 +1,41 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/davidmatos/dev/LxBWS_Certificates_Contract/contracts/LxBWSCertificateAttendance.sol": {
+      "lastModificationDate": 1739879411612,
+      "contentHash": "8bfab982a88ce4d809a4c9510686bdc7",
+      "sourceName": "contracts/LxBWSCertificateAttendance.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "LxBWSCertificateAttendance"
+      ]
+    }
+  }
+}
