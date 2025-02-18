@@ -1,0 +1,194 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "exists",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "DocumentVerified",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32[]",
+						"name": "hashes",
+						"type": "bytes32[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "DocumentsAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32[]",
+						"name": "hashes",
+						"type": "bytes32[]"
+					}
+				],
+				"name": "addDocuments",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					}
+				],
+				"name": "checkHash",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					}
+				],
+				"name": "verifyHash",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32[]",
+						"name": "hashes",
+						"type": "bytes32[]"
+					}
+				],
+				"name": "verifyHashes",
+				"outputs": [
+					{
+						"internalType": "bool[]",
+						"name": "results",
+						"type": "bool[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addDocuments(bytes32[])": {
+					"details": "Add multiple document hashes to the contract",
+					"params": {
+						"hashes": "Array of document hashes to store"
+					}
+				},
+				"checkHash(bytes32)": {
+					"details": "View function to check if a document hash exists (no event emission)",
+					"params": {
+						"hash": "The document hash to check"
+					},
+					"returns": {
+						"_0": "bool indicating if the document exists"
+					}
+				},
+				"verifyHash(bytes32)": {
+					"details": "Verify if a document hash exists in the contract",
+					"params": {
+						"hash": "The document hash to verify"
+					},
+					"returns": {
+						"_0": "bool indicating if the document exists"
+					}
+				},
+				"verifyHashes(bytes32[])": {
+					"details": "Batch verify multiple document hashes",
+					"params": {
+						"hashes": "Array of document hashes to verify"
+					},
+					"returns": {
+						"results": "Array of boolean results indicating existence of each hash"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/LxBWSCertificateAttendance.sol": "LxBWSCertificateAttendance"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/LxBWSCertificateAttendance.sol": {
+			"keccak256": "0x282faf624d0de864d86b7a971e485b70ff87eb6e8dfa26f161b7581e803b8678",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c3cce800f1ef64b8211f3200908bbc0479b778ffa39c2666fe93c4fd1f3d0848",
+				"dweb:/ipfs/QmbumE68Lw5wvF1yrTPrEh8zPbDNqunnrDRgBKLooFMK4p"
+			]
+		}
+	},
+	"version": 1
+}

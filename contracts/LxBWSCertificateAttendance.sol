@@ -24,6 +24,9 @@ pragma solidity ^0.8.19;
 contract LxBWSCertificateAttendance {
     // Mapping to store document hashes
     mapping(bytes32 => bool) private documentHashes;
+
+    address private _organizer;
+
     
     // Event emitted when new documents are added
     event DocumentsAdded(bytes32[] hashes, uint256 timestamp);
@@ -31,11 +34,18 @@ contract LxBWSCertificateAttendance {
     // Event emitted when a document is verified
     event DocumentVerified(bytes32 hash, bool exists, uint256 timestamp);
 
+    
+    // Modifier to restrict access to the organizer only
+    modifier onlyOrganizer() {
+        require(msg.sender == _organizer, "Only the organizer can perform this action");
+        _;
+    }
+
     /**
      * @dev Add multiple document hashes to the contract
      * @param hashes Array of document hashes to store
      */
-    function addDocuments(bytes32[] calldata hashes) external {
+    function addDocuments(bytes32[] calldata hashes) external onlyOrganizer {
         for (uint i = 0; i < hashes.length; i++) {
             require(hashes[i] != bytes32(0), "Invalid document hash");
             documentHashes[hashes[i]] = true;
