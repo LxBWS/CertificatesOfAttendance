@@ -41,6 +41,10 @@ contract LxBWSCertificateAttendance {
         _;
     }
 
+ // Initialize the contract with the ERC20 token contract address and the registration fee
+    constructor() {
+        _organizer = msg.sender;
+    }
     /**
      * @dev Add multiple document hashes to the contract
      * @param hashes Array of document hashes to store
